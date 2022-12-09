@@ -12,10 +12,10 @@ const ReactionSchema = new Schema(
       required: true,
       maxlength: 280,
     },
-    username: {
-      type: String,
-      required: true,
-    },
+    // username: {
+    //   type: String,
+    //   required: true,
+    // },
     createdAt: {
       type: Date,
       get: (createdAtVal) =>
@@ -43,10 +43,10 @@ const ThoughtSchema = new Schema(
       get: (createdAtVal) =>
         DateTime.fromJSDate(createdAtVal).toLocaleString(DateTime.DATETIME_MED),
     },
-    username: {
-      type: String,
-      required: true,
-    },
+    // username: {
+    //   type: String,
+    //   required: true,
+    // },
     reactions: [ReactionSchema],
   },
   {
