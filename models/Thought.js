@@ -18,6 +18,7 @@ const ReactionSchema = new Schema(
     },
     createdAt: {
       type: Date,
+      default: Date.now,
       get: (createdAtVal) =>
         DateTime.fromJSDate(createdAtVal).toLocaleString(DateTime.DATETIME_MED),
     },
